@@ -1,0 +1,27 @@
+section{
+    display: flex;
+    gap: 3rem;
+   
+}
+
+div{
+    width: 200px;
+  border: 2px solid blue;
+    height: 150px;
+}
+
+div:has(h1){
+    background-color: red;
+}
+
+div:has(a){
+    color: yellow;
+}
+
+div:has(> a){
+    background-color: green;
+}
+
+div:has(p:empty){
+    background-color: blueviolet;
+}
