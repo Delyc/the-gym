@@ -25,3 +25,15 @@ div:has(> a){
 div:has(p:empty){
     background-color: blueviolet;
 }
+
+div:has(.changeme){
+    background-color: aquamarine;
+}
+
+.test:has(.para){
+    background-color: darksalmon;
+}
+
+div :is(h1, p){
+    font-size: 1.5rem;
+}

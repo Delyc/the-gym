@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* 
+* {
+  @apply font-roboto;
+} */
+
+@layer base {
+    h1 {
+      @apply text-[56px]   font-extrabold;
+    }
+    h2 {
+      @apply text-[48px]   font-extrabold;
+    }
+    h3 {
+      @apply text-[32px]    font-extrabold;
+    }
+    h4 {
+      @apply text-[24px]    font-extrabold;
+    }
+    h5 {
+      @apply text-[18px] ;
+    }
+    h6 {
+      @apply text-[16px]  opacity-[0.87] font-semibold;
+    }
+    p {
+      @apply text-[16px];
+    }
+  }
+
+  .body-background {
+    background: radial-gradient(
+        483.9% 2719.65% at -49.5% -250%,
+        #d798e1 17.55%,
+        #9bffa5 27.56%,
+        #aed3ff 49.89%,
+        #c9d4ef 56.53%,
+        #cacffa 65.69%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    filter: blur(200px);
+  }
+ 
+
+  @layer components {
+    .gradient {
+        background: -webkit-linear-gradient(53.94deg, #373fff 15.02%, #3acaf8 82.83%);
+        background-clip: text;
+        fill: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bolder;
+      }
+    
+
+        .navigation{
+            @apply flex justify-between  items-center py-3 px-10
+        }
+
+        .navigation__menu{
+            @apply flex gap-6 items-center
+        }
+
+        .navigation__list{
+            @apply flex gap-6
+        }
+
+        .navigation__item{
+            @apply text-dark-blue
+        }
+
+        .navigation__button, .herosection__button, .impressions__button, .grow-business__button{
+            @apply bg-dark-blue py-3 px-5 text-white rounded-md font-bold
+        }
+
+        .herosection{
+            @apply px-44 flex flex-col items-center gap-6 py-20
+        }
+
+        .herosection__title{
+            @apply text-center w-5/6 text-dark-blue
+        }
+
+        .herosection__slogan{
+            @apply text-dark-blue opacity-[0.87] text-center w-4/5
+        }
+
+        .herosection__freetrials{
+            @apply relative  w-1/2
+        }
+
+        .herosection__input{
+            @apply outline-none  px-3 py-3 w-full
+        }
+
+        .herosection__button{
+            @apply absolute right-0
+
+        }
+
+        .services{
+            @apply flex flex-col justify-center items-center gap-8 px-10
+        }
+
+        .services__title{
+            @apply text-blue-500
+        }
+
+        .services__slogan{
+            @apply text-dark-blue w-1/2 text-center
+        }
+
+        .services__wrapper{
+            @apply flex bg-light-purple rounded-md py-5 px-8 gap-6
+        }
+
+        .services__icon{
+            @apply w-12 h-12
+        }
+
+        .services__type{
+            @apply basis-96 flex flex-col gap-3
+
+        }
+
+        .services__description{
+            @apply opacity-[0.87]
+        }
+
+        .workwithus, .discover{
+            @apply px-10 flex justify-between py-32 items-center
+        }
+        .workwithus__description, .discover__description{
+            @apply  basis-1/2
+        }
+
+        .workwithus__list, .discover__list{
+            @apply basis-2/5
+        }
+
+        .workwithus__card, .discover__card{
+            @apply flex gap-3 items-center basis-96
+        }
+
+        .workwithus__icon{
+            @apply bg-light-orange py-3 px-3 w-12 h-12 rounded-full
+        }
+        .discover__icon{
+            @apply bg-light-gray py-3 px-3 w-12 h-12 rounded-full
+        }
+
+        .workwithus__img{
+            @apply w-6
+        }
+
+        .impressions, .marketing{
+            @apply flex justify-between px-10 items-center
+        }
+
+        .impressions__description,   .marketing__description{
+            @apply basis-1/2 flex flex-col gap-5
+        }
+
+        .impressions__image,       .marketing__image{
+            @apply  w-2/5
+        }
+        .impressions__button{
+            @apply w-36
+        }
+
+        .partners {
+            @apply flex justify-center py-10  ;
+          }
+        
+          .partners__logos {
+            @apply flex justify-between w-[92%];
+          }
+        
+          .partners__company {
+            @apply w-[12vw];
+          }
+
+          .testimonials{
+            @apply px-10
+          }
+
+          .testimonials__wrapper{
+            @apply flex justify-between gap-4
+          }
+
+          .testimonials__testimony{
+            @apply flex flex-col gap-4 justify-center items-center basis-96 border border-bordered-blue px-10 py-10 rounded-lg
+          }
+
+          .testimonials__profile{
+            @apply flex flex-col justify-center items-center mt-5
+          }
+
+          .product-herosection{
+            @apply flex justify-between px-10 py-24 
+          }
+
+          .product-herosection__description{
+            @apply w-2/5 font-extrabold flex flex-col gap-4
+          }
+          .product-herosection__image{
+            @apply w-1/2
+          }
+          .product-herosection__img{
+            @apply w-full
+          }
+
+          .product-services__wrapper{
+            @apply flex flex-wrap justify-between pl-10 w-11/12  mt-10 py-5 bg-slate-50 rounded-tr-3xl gap-6
+          }
+
+          .product-services__service{
+            @apply basis-80
+          }
+
+          .product-services__icon{
+            @apply w-10
+          }
+
+          .marketing{
+            @apply mt-10
+          }
+          .marketing--reversed{
+            @apply flex-row-reverse
+          }
+          .marketing__paragraph{
+            @apply w-5/6 
+          }
+
+          .grow-business{
+            @apply flex flex-col items-center justify-center relative py-20
+          }
+
+          .grow-business__wrapper{
+            @apply flex flex-col items-center gap-4
+          }
+
+          .grow-business__heading{
+            @apply w-3/5 text-center font-extrabold 
+          }
+
+          .footer{
+            @apply px-10 bg-dark-blue flex flex-col gap-5
+          }
+
+          .footer__uppersection{
+            @apply flex justify-between py-10
+          }
+
+          .footer__heading{
+            @apply text-white font-bold
+          }
+
+          .footer__paragraph{
+            @apply text-white opacity-60 font-medium
+          }
+
+          .footer__usefullinks{
+            @apply flex flex-col gap-2
+          }
+
+          .footer__logo{
+            @apply w-36
+          }
+          .footer__subscribe{
+            @apply w-1/4 flex flex-col gap-2
+          }
+
+          .footer__subscribe-div{
+            @apply relative  w-full
+        }
+
+        .footer__input{
+            @apply outline-none bg-input-bg rounded-md px-3 py-3 w-full
+        }
+
+        .footer__button{
+            @apply absolute right-0 bg-white text-dark-blue py-3 px-3 font-bold
+
+        }
+
+        .footer__lower-section{
+            @apply flex justify-between
+        }
+
+        .footer__socials{
+            @apply flex gap-5
+        }
+
+        .footer__social{
+            @apply opacity-[0.5] text-white
+        }
+
+
+        }
